@@ -31,7 +31,7 @@ and upload the ipynb to Colab!
 ## Inference
 
 The idea is to make a colour modified map to show the areas with and without flooding.
-I used another image from the QLD Spacial site for inference. Please find all of the data on the google drive link.
+I used another image from the QLD Spacial site for inference. 
 
 The output can be seen:
 
