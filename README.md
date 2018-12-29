@@ -1,14 +1,13 @@
 # Flood_detector
 
-A computer vision approach to detect flooded areas from arial imagery.
+A computer vision approach to detect flooded areas from aerial imagery.
 
-The aim is to detect areas with flooding and generate a 'patch work quilt' showing flooded areas to enable better route planning for emergency services.
+The aim is to detect areas with flooding and generate a 'patchwork quilt' showing flooded areas to enable better route planning for emergency services.
 
 
 ## Dataset
 
 The dataset for this project can be found here:
-
 
 This was created using the file *slice_and_crop.ipynb* in *make_datasets* dir. The source data was collected using the search term 'flood imagery' :
 <http://qldspatial.information.qld.gov.au/catalogue/custom/search.page>
@@ -21,7 +20,7 @@ You can download my dataset by making an issues and I will email it to you :)
 
 ## Training
 
-In *training.ipynb* exists code to training a simple CNN. Performance would likely imporve with models such as [NASNet](https://arxiv.org/pdf/1707.07012.pdf) or a more simple archtecture such as Inception-v3.
+In *training.ipynb* exists code to training a simple CNN. Performance would likely improve with models such as [NASNet](https://arxiv.org/pdf/1707.07012.pdf) or a more simple architecture such as Inception-v3.
 
 I decided to use Keras since it's becoming the Tensorflow default API in TF 2.0! 🎼🔈 Times they are a'changing 🎼🔈
 Run this in google colab! I've tested it to make sure it works! Just:
@@ -49,12 +48,12 @@ Another result before I performed some dataset cleansing:
 
 ## Learnings
 
-1. There is significant colour variation in the colour of the floods. This is the main artifact use to make the dataset. This can be solved with much more training data. <500 images isn't alot for a full train of a CNN.
+1. There is a significant colour variation in the colour of the floods. This is the main artefact use to make the dataset. This can be solved with much more training data. <500 images isn't a lot for a full train of a CNN.
 
 2. Some data normalisation could be used:
     `determine flood water colour range -> replace with a narrower range of colour -> do for both train and inference images`
 3. Test more modern CNNs such as Inception-V3 and compare results
 
-4. I spent quite some time dealing with the enormous images from the souce. This was impossible to deal with in OpenCV due to 2^32 pixel limits. I resized with GIMP then read into OpenCV, change your slicing window accordingly! This flag can also work when the images are lower than the limit but use too much ram: 
+4. I spent quite some time dealing with the enormous images from the source. This was impossible to deal with in OpenCV due to 2^32 pixel limits. I resized with GIMP then read into OpenCV, change your slicing window accordingly! This flag can also work when the images are lower than the limit but use too much ram: 
 
 ```org_image = cv2.imread(image_path, cv2.IMREAD_REDUCED_COLOR_8)```
