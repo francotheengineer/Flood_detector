@@ -10,7 +10,7 @@ The aim is to detect areas with flooding and generate a 'patch work quilt' showi
 The dataset for this project can be found here:
 
 
-This was created using the file *slice_and_crop.ipynb* in *make_datasets* dir. The source data was collected using the search term flood imagery' :
+This was created using the file *slice_and_crop.ipynb* in *make_datasets* dir. The source data was collected using the search term 'flood imagery' :
 <http://qldspatial.information.qld.gov.au/catalogue/custom/search.page>
 
 This yielded these 2 datasets and more:
