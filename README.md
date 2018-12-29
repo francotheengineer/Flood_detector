@@ -55,6 +55,6 @@ Another result before I performed some dataset cleansing:
     `determine flood water colour range -> replace with a narrower range of colour -> do for both train and inference images`
 3. Test more modern CNNs such as Inception-V3 and compare results
 
-4. I spent quite some time dealing with the enormous images from the souce about. This was impossible to deal with in OpenCV due to 2^32 pixel limits. I resized with GIMP then read into OpenCV, change your slicing window accordingly! This flag can also work when the images are lower than the limit but use too much ram: 
+4. I spent quite some time dealing with the enormous images from the souce. This was impossible to deal with in OpenCV due to 2^32 pixel limits. I resized with GIMP then read into OpenCV, change your slicing window accordingly! This flag can also work when the images are lower than the limit but use too much ram: 
 
 ```org_image = cv2.imread(image_path, cv2.IMREAD_REDUCED_COLOR_8)```
